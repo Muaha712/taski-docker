@@ -18,7 +18,7 @@ jobs:
           POSTGRES_USER: django_user
           POSTGRES_PASSWORD: <PASSWORD>
           POSTGRES_DB: django_db
-          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
+          ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
         ports:
           - 5432:5432
         # Эта конструкция описывает проверку готовности сервиса postgres
@@ -44,7 +44,7 @@ jobs:
         POSTGRES_USER: django_user
         POSTGRES_PASSWORD: <PASSWORD>
         POSTGRES_DB: django_db
-        ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION=true
+        ACTIONS_ALLOW_USE_UNSECURE_NODE_VERSION: 'true'
         # Сервер БД запущен в Docker, но его порт проброшен на хост
         # Поэтому подключаемся к 127.0.0.1:5432
         DB_HOST: 127.0.0.1
